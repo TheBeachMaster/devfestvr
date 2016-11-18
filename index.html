@@ -30,7 +30,7 @@
             <img src="assets/AbbayeOrval.jpg" crossorigin="anonymous" id="abbayeorval" alt="">
             <img src="assets/BadDriburgCountsPark.jpg" crossorigin="anonymous" id="baddriburg" alt="">
             <img src="assets/DresdenZwinger02.jpg" crossorigin="anonymous" id="dresden" alt="">
-            <img src="assets/ErmitaMonserrate.jpg" crossorigin="anonymous" id="ermita" alt="">
+            <img src="assets/ErmitaMonserrate.jpg" crossorigin="anonymous" id="ermitta" alt="">
             <img src="assets/FinlagganCastle02.jpg" crossorigin="anonymous" id="flanaggan" alt="">
             <img src="assets/FrederiksborgCastle.jpg" crossorigin="anonymous" id="fredriks" alt="">
             <img src="assets/KievSaintSofiaChurch.jpg" crossorigin="anonymous" id="stsofia" alt="">
@@ -63,6 +63,27 @@
         </a-assets>
 
         <a-sky id="image-360" radius="3" src="#abbaye"></a-sky>
+
+        <a-entity id="links" layout="type: line; margin: 1.5" position="-4.25 -1 -4">
+            <a-entity template="src: #link" data-src="#abbaye" data-thumb="#abbaye_thumb"></a-entity>
+            <a-entity template="src: #link" data-src="#abbayeorval" data-thumb="#orval_thumb"></a-entity>
+            <a-entity template="src: #link" data-src="#baddriburg" data-thumb="#driburg_thumb"></a-entity>
+            <a-entity template="src: #link" data-src="#dresden" data-thumb="#dresden_thumb"></a-entity>
+            <a-entity template="src: #link" data-src="#ermitta" data-thumb="#ermitta_thumb"></a-entity>
+            <a-entity template="src: #link" data-src="#flanaggan" data-thumb="#finlaggan_thumb"></a-entity>
+            <a-entity template="src: #link" data-src="#fredriks" data-thumb="#fredrik_thumb"></a-entity>
+            <a-entity template="src: #link" data-src="#stsofia" data-thumb="#sofia_thumb"></a-entity>
+            <a-entity template="src: #link" data-src="#libochovice" data-thumb="#libo_thumb"></a-entity>
+            <a-entity template="src: #link" data-src="#litvinov" data-thumb="#litvinov_thumb"></a-entity>
+            <a-entity template="src: #link" data-src="#kremlin" data-thumb="#kremlin_thumb"></a-entity>
+            <a-entity template="src: #link" data-src="#schwaz" data-thumb="#orgel_thumb"></a-entity>
+
+
+        </a-entity>
+        <a-entity camera look-controls>
+            <a-cursor id="cursor" animation__click="property: scale; startEvents: click; from: 1 1 1; to: 1 1 1; dur: 150" animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500" event-set__1="_event: mouseenter; color: springgreen"
+                event-set__2="_event: mouseleave; color: black" raycaster="objects: .link"></a-cursor>
+        </a-entity>
 
     </a-scene>
 
